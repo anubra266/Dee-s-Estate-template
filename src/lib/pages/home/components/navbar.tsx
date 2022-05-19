@@ -1,5 +1,5 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
-import { Logo } from "lib/components/auth/logo";
+import { Logo } from "lib/components/logo";
 
 const ROUTES = [
   {
@@ -33,6 +33,7 @@ export const Navbar = () => {
       <Flex align="center" gap="16">
         {ROUTES.map((route) => (
           <Text
+            key={route.label}
             color={route.isActive ? "#0F298B" : "black"}
             fontWeight={route.isActive ? "bold" : "normal"}
           >
@@ -40,15 +41,7 @@ export const Navbar = () => {
           </Text>
         ))}
       </Flex>
-      <Button
-        bg="#2549D3"
-        color="white"
-        opacity="0.9"
-        _hover={{ opacity: "1" }}
-        size="lg"
-      >
-        Get Started
-      </Button>
+      <Button size="lg">Get Started</Button>
     </Flex>
   );
 };
