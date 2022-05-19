@@ -27,7 +27,7 @@ export const Navbar = () => {
       px="20"
       py="8"
       borderBottom="1px solid #C4C4C4"
-      gap="40"
+      justify="space-between"
     >
       <Logo height="20px" />
       <Flex align="center" gap="16">
@@ -41,7 +41,9 @@ export const Navbar = () => {
           </Text>
         ))}
       </Flex>
-      <Button size="lg">Get Started</Button>
+      <Button size="lg" mr="16">
+        Get Started
+      </Button>
     </Flex>
   );
 };
